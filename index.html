@@ -35,15 +35,15 @@
     .project img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line)}
     .project-copy{padding:10px}.project-copy h3{font-size:32px;margin:10px 0}
     .project-copy p{color:var(--muted)}
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:42px}.gallery figure{margin:0;background:var(--panel);border:1px solid var(--line);overflow:hidden}.gallery img{width:100%;height:260px;object-fit:cover;display:block}.gallery figcaption{padding:14px 16px;color:#ddd;font-weight:800}.gallery small{display:block;color:var(--muted);font-weight:400;margin-top:3px}.check{margin:18px 0;padding-left:0;list-style:none}
+    .gallery{display:flex;gap:16px;margin-top:42px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 0 16px;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}.gallery figure{margin:0;background:var(--panel);border:1px solid var(--line);overflow:hidden;flex:0 0 min(78vw,360px);scroll-snap-align:start}.gallery img{width:100%;height:270px;object-fit:cover;display:block}.gallery figcaption{padding:14px 16px;color:#ddd;font-weight:800}.gallery small{display:block;color:var(--muted);font-weight:400;margin-top:3px}.gallery::-webkit-scrollbar{height:7px}.gallery::-webkit-scrollbar-thumb{background:#444;border-radius:8px}.swipe-note{color:var(--muted);font-size:13px;margin:8px 0 0}.check{margin:18px 0;padding-left:0;list-style:none}
     .check li{margin:10px 0}.check li:before{content:"✓";color:var(--accent);font-weight:900;margin-right:10px}
     .cta{background:var(--accent);color:#111}.cta h2{max-width:750px}.cta p{font-size:18px;max-width:680px}
     .cta .btn{background:#111;color:#fff}.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     .contact-box{background:var(--panel);border:1px solid var(--line);padding:30px}.contact-box small{display:block;color:var(--accent);font-weight:900;text-transform:uppercase;letter-spacing:.12em}
     .contact-box a{display:inline-block;font-size:24px;font-weight:900;margin-top:8px}
     footer{border-top:1px solid var(--line);padding:28px 0;color:#888;font-size:13px}
-    @media(max-width:800px){.navlinks{display:none}.grid{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.gallery img{height:220px}.project,.contact{grid-template-columns:1fr}.trust-grid{grid-template-columns:1fr;gap:14px}.trust-grid div+div{border-left:0;border-top:1px solid var(--line);padding-top:14px}}
-    @media(max-width:520px){.grid,.gallery{grid-template-columns:1fr}section{padding:65px 0}.hero{min-height:590px}.hero-inner{padding:75px 0}}
+    @media(max-width:800px){.navlinks{display:none}.grid{grid-template-columns:1fr 1fr}.gallery img{height:240px}.project,.contact{grid-template-columns:1fr}.trust-grid{grid-template-columns:1fr;gap:14px}.trust-grid div+div{border-left:0;border-top:1px solid var(--line);padding-top:14px}}
+    @media(max-width:520px){.grid{grid-template-columns:1fr}.gallery figure{flex-basis:86vw}.gallery img{height:250px}section{padding:65px 0}.hero{min-height:590px}.hero-inner{padding:75px 0}}
   </style>
 </head>
 <body>
@@ -97,7 +97,7 @@
   <section id="work">
     <div class="wrap">
       <div class="project">
-        <img src="project-bathroom.jpg" alt="Custom bathroom tile work completed by Mignola Contracting">
+        <img src="project-tile-shower.jpg" alt="Large-format marble-look shower tile installation by Mignola Contracting">
         <div class="project-copy">
           <div class="eyebrow">Featured Work</div>
           <h3>Attention to the details.</h3>
@@ -109,13 +109,14 @@
           </ul>
         </div>
       </div>
+      <p class="swipe-note">Swipe left or right to see more projects.</p>
       <div class="gallery">
-        <figure><img src="project-shop-framing.jpg" alt="Large shop framing project by Mignola Contracting" loading="lazy"><figcaption>Structural Framing<small>Large-building framing and structural construction.</small></figcaption></figure>
+        <figure><img src="project-tile-shower.jpg" alt="Large-format shower tile installation by Mignola Contracting" loading="lazy"><figcaption>Custom Tile Shower<small>Large-format tile, niche and built-in bench.</small></figcaption></figure>
+        <figure><img src="project-heated-shower.jpg" alt="Heated shower floor and waterproofing system by Mignola Contracting" loading="lazy"><figcaption>Shower Systems<small>Waterproofing, heated floor and tile preparation.</small></figcaption></figure>
+        <figure><img src="project-island.jpg" alt="Custom kitchen island by Mignola Contracting" loading="lazy"><figcaption>Remodeling & Finish Work<small>Custom island and interior finish carpentry.</small></figcaption></figure>
+        <figure><img src="project-framing.jpg" alt="Large building framing project by Mignola Contracting" loading="lazy"><figcaption>Structural Framing<small>Large-building framing and structural construction.</small></figcaption></figure>
         <figure><img src="project-shop-siding.jpg" alt="Metal siding installation by Mignola Contracting" loading="lazy"><figcaption>Metal Siding<small>Durable exterior metal siding and trim.</small></figcaption></figure>
-        <figure><img src="project-kitchen.jpg" alt="Kitchen remodel by Mignola Contracting" loading="lazy"><figcaption>Kitchen Remodel<small>Cabinetry, countertops and interior finish work.</small></figcaption></figure>
-        <figure><img src="project-bathroom.jpg" alt="Bathroom tile project by Mignola Contracting" loading="lazy"><figcaption>Tile & Bathrooms<small>Detailed tile installation and finish work.</small></figcaption></figure>
-        <figure><img src="project-patio.jpg" alt="Covered patio with wood ceiling by Mignola Contracting" loading="lazy"><figcaption>Outdoor Construction<small>Covered patios and wood finish details.</small></figcaption></figure>
-        <figure><img src="project-shop-finished.jpg" alt="Completed shop exterior by Mignola Contracting" loading="lazy"><figcaption>Shops & Outbuildings<small>From framing through exterior finish.</small></figcaption></figure>
+        <figure><img src="project-patio.jpg" alt="Covered patio construction by Mignola Contracting" loading="lazy"><figcaption>Outdoor Construction<small>Covered patios and wood finish details.</small></figcaption></figure>
       </div>
     </div>
   </section>
